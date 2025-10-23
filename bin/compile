@@ -4,6 +4,7 @@ CURDIR=$PWD
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 echo "-----> Installing latest postgrest bin"
 cd $DIR; cp ../postgrest-v13.0.0 $1/postgrest-v13.0.0
+chmod 755 $1/postgrest-v13.0.0
 cd $CURDIR
 
 echo "-----> Setting up postgrest.conf"
