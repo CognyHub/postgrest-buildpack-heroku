@@ -15,7 +15,3 @@ echo "-----> Deploy postgrest Runner"
 cd $DIR; cp ../start_postgrest.sh $1/start_postgrest.sh
 chmod 755 $1/start_postgrest.sh
 cd $CURDIR 
-
-cd $DIR; cp ../start_postgrest_local.sh $1/start_postgrest_local.sh
-chmod 755 $1/start_postgrest_local.sh
-cd $CURDIR
