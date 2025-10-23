@@ -2,32 +2,19 @@
 
 CURDIR=$PWD
 DIR="$( cd "$( dirname "$0" )" && pwd )"
-echo "-----> Installing latest caddy bin"
-# if [ -f $2/caddy_linux_amd64.zip ]; then
-#   echo "-----> caddy is already installed"
-#   cd $2; unzip -o caddy_linux_amd64.zip
-#   cp $2/caddy_linux_amd64 $1/caddy
-# else
-#   echo "-----> download and unzip caddy"
-#   cd $2; wget https://github.com/mholt/caddy/releases/download/v0.5.0/caddy_linux_amd64.zip
-#   cd $2; mkdir -p /app/tmp/cache
-#   cd $2; unzip caddy_linux_amd64.zip
-#   cp $2/caddy_linux_amd64 $1/caddy
-# fi
-
-cd $DIR; cp ../caddy $1/caddy
+echo "-----> Installing latest postgrest bin"
+cd $DIR; cp ../postgrest-v13.0.0 $1/postgrest-v13.0.0
 cd $CURDIR
 
-# echo "-----> Setting up Procfile"
-# cd $DIR; cp ../Procfile $1/Procfile
-# cd $CURDIR
+echo "-----> Setting up postgrest.conf"
+cd $DIR; cp ../postgrest-v13.0.0.conf $1/postgrest-v13.0.0.conf
+cd $CURDIR
 
-# echo "-----> Setting up Caddyfile"
-# cd $DIR; cp ../Caddyfile $1/Caddyfile
-# cd $CURDIR
-
-
-echo "-----> Deploy Caddy Runner"
-cd $DIR; cp ../start_caddy.sh $1/start_caddy.sh
-chmod 755 $1/start_caddy.sh
+echo "-----> Deploy postgrest Runner"
+cd $DIR; cp ../start_postgrest.sh $1/start_postgrest.sh
+chmod 755 $1/start_postgrest.sh
 cd $CURDIR 
+
+cd $DIR; cp ../start_postgrest_local.sh $1/start_postgrest_local.sh
+chmod 755 $1/start_postgrest_local.sh
+cd $CURDIR
