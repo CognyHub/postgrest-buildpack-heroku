@@ -8,7 +8,7 @@ chmod 755 $1/postgrest-v13.0.0
 cd $CURDIR
 
 echo "-----> Setting up postgrest.conf"
-cd $DIR; cp ../postgrest-v13.0.0.conf $1/postgrest-v13.0.0.conf
+cd $DIR; cp ../postgrest.conf $1/postgrest.conf
 cd $CURDIR
 
 echo "-----> Deploy postgrest Runner"

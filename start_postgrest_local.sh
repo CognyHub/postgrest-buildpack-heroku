@@ -7,8 +7,8 @@ export PGRST_OPENAPI_SERVER_PROXY_URI=https://${HEROKU_APP_DEFAULT_DOMAIN_NAME}
 export POSTGREST_VER=${POSTGREST_VER:-13.0.0}
 
 # show configs
-./postgrest-v${POSTGREST_VER} ./postgrest-v${POSTGREST_VER}.conf --dump-config
+./postgrest-v${POSTGREST_VER} ./postgrest.conf --dump-config
 
 # start process
-./postgrest-v${POSTGREST_VER} ./postgrest-v${POSTGREST_VER}.conf
+./postgrest-v${POSTGREST_VER} ./postgrest.conf
 
