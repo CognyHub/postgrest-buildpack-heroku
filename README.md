@@ -1,6 +1,6 @@
-# Heroku Buildpack: PostgRest
+# Heroku Buildpack: PostgREST
 
-This is a Heroku Buildpack for PostgRest Server.
+This is a Heroku Buildpack for PostgREST Server.
 
 ## Getting Started
 
